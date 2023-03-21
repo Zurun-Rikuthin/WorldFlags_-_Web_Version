@@ -2,14 +2,37 @@ a {
     color: white;
 }
 
+aside.left-sidebar {
+    /*flex-grow: 3;*/
+    height: 100%;
+    position: fixed;
+    float: left;
+}
+
 body {
     background-color:rgba(182, 98, 67, 0.437);
     height: 100vh;
     width: 100vw;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    /*
     display: flex;
     flex-direction: row;
+    */
 }
+
+div.content {
+    height: 100%;
+    position: fixed;
+    float: right;
+}
+/*
+div.flex-row {
+    flex-grow: 8;
+    height: 80%;
+}
+*/
 
 figcaption {
     font-weight: bold;
@@ -21,7 +44,7 @@ header, footer {
     background-color:  #1976D2;
     margin: 0%;
     padding: 1em;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     position: fixed;
     height: 5%;
 }
@@ -45,7 +68,7 @@ main {
     flex-grow: 7;
 }
 
-nav {
+nav.vertical-nav {
     margin: 0%;
     height: 100%;
     background-color: rgb(9, 9, 105);
@@ -107,11 +130,6 @@ ul {
     flex-direction: row;
 }
 
-div.flex-row {
-    flex-grow: 8;
-    height: 80%;
-}
-
 .internal-nav-link {
     padding: 3px;
     background-color: #BBDEFB;
@@ -123,10 +141,4 @@ div.flex-row {
     position: fixed;
     flex-grow: 7;
     height: 80%;
-}
-
-#sidebar {
-    flex-grow: 3;
-    height: 100%;
-    position: fixed;
 }
