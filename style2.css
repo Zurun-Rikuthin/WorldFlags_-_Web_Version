@@ -1,62 +1,28 @@
-aside.left-sidebar {
-    background-color: beige;
-    height: 100%;
-    min-width: 180px;
+*:not(hr) {
+    /*Universal CSS Reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 2px red dashed;*/
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: grid;
+    min-height: 100vh;
+    width: 100%;
     background-color: #FFFFFF;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 7fr;
 }
 
-div.content {
-    height: 100em;
-    min-width: 520px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-/*
-footer {
+aside.left-sidebar {
+    background-color: beige;
+    height: 100vh;
+    width: 180px;
+    padding: 5px;
     position: fixed;
-    float: bottom;
-}
-
-header {
-    position: fixed;
-    float: top;    
-}
-*/
-header, footer {
-    color: white;
-    background-color: #1976D2;
-    height: 5em;
-}
-
-hr.sidebar-line {
-    margin: 10px;
-    border: whitesmoke 1px groove;
-}
-
-li.vertical-navbar-list-element:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-main {
-    background-color: green;
-    height: 90em;
 }
 
 nav.vertical-navbar {
-    margin: 10px;
     height: 100%;
+    width: 100%;
     padding: 10px;
     background-color: rgb(1, 1, 55);
     color: whitesmoke;
@@ -64,20 +30,67 @@ nav.vertical-navbar {
     text-align: center;
 }
 
+hr.sidebar-line {
+    margin: 10px;
+    border: whitesmoke 1px groove;
+}
+
 ul.vertical-navbar-list {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    padding: 0px;
     list-style-type: none;
+    height: fit-content;
+}
+
+li.vertical-navbar-list-element:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .internal-nav-link {
-    padding: 5px;
-    background-color: #98c5eb;
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    background-color: #4fa4ea;
     border: solid black 1px;
     border-radius: 20px;
 }
 
-#left-sidebar-title {
-    margin: 0px;
+div.content {
+    height: 100%;
+    min-width: 520px;
+    width: auto;
+    position: relative;
+    margin-left: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+footer {
+    bottom: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+*/
+header, footer {
+    color: white;
+    background-color: #1976D2;
+    height: 5em;
+    width: 100%;
+    z-index: 100;
+    padding: 10px;
+}
+
+main {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    top: 5em;
+    bottom: 5em;
+    padding: 10px;
 }
