@@ -1,0 +1,31 @@
+{
+  "name": "worldflags_-_web_version",
+  "version": "0.0.1",
+  "description": "A web application that lists flags from around the world.",
+  "main": "index.html",
+  "scripts": {
+    "test": "None"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zurun-Rikuthin/WorldFlags_-_WebVersion.git"
+  },
+  "keywords": [
+    "web",
+    "flag",
+    "flags",
+    "images",
+    "list",
+    "html",
+    "html5",
+    "css",
+    "ja",
+    "javascript"
+  ],
+  "author": "Zurun-Rikuthin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zurun-Rikuthin/WorldFlags_-_WebVersion/issues"
+  },
+  "homepage": "https://github.com/Zurun-Rikuthin/WorldFlags_-_WebVersion#readme"
+}

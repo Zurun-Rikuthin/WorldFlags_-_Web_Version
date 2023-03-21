@@ -1,0 +1,132 @@
+a {
+    color: white;
+}
+
+body {
+    background-color:rgba(182, 98, 67, 0.437);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+figcaption {
+    font-weight: bold;
+    text-align: center;
+}
+
+header, footer {
+    color: white;
+    background-color:  #1976D2;
+    margin: 0%;
+    padding: 1em;
+    flex-grow: 1;
+    position: fixed;
+    height: 5%;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    margin: 0%;
+    padding: 0%;
+    height: 90%;
+    flex-grow: 7;
+}
+
+nav {
+    margin: 0%;
+    height: 100%;
+    background-color: rgb(9, 9, 105);
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, label, #flag_container {
+    margin: 20px;
+}
+
+ul {
+    padding: 0%;
+}
+
+.flag_container {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    border: black solid 2px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.flag_figure {
+    margin: 1%;
+    padding: 2%;
+    height: auto;
+    width: 5%;
+    background-color: gray;
+}
+
+.flag_img {
+    width: 50%;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    outline: 5px solid rgb(255, 255, 255);
+    outline-offset: -10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.flex-row {
+    flex-grow: 8;
+    height: 80%;
+}
+
+.internal-nav-link {
+    padding: 3px;
+    background-color: #BBDEFB;
+    border: solid black 1px;
+    border-radius: 20px;
+}
+
+#content {
+    position: fixed;
+    flex-grow: 7;
+    height: 80%;
+}
+
+#sidebar {
+    flex-grow: 3;
+    height: 100%;
+    position: fixed;
+}
