@@ -3,62 +3,203 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: 2px red dashed;*/
+    /*border: 1px red dashed;*/
 }
 
 body {
     min-height: 100vh;
+    height: fit-content;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: black;
 }
 
-aside.left-sidebar {
-    background-color: beige;
-    height: 100vh;
+
+/* BEGIN HEADER STYLING*/
+header {
+    height: 5em;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    background-color: rgb(1, 1, 55);
+    color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+header a.home-button:link {
+    text-decoration: none;
+}
+
+header a.home-button:visited {
+    text-decoration: none;
+}
+
+header a.home-button:hover{
+    text-decoration: none;
+}
+
+header a.home-button:active {
+    text-decoration: none;
+}
+
+header a.home-button {
+    height: 100%;
+    width: 3em;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+header h2 {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.home-button-house-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.house-icon-roof {
+    width: 100%;
+    /*
+    Set left and right border width to half of .house-icon's width,
+    and bottom border width to 2/3 of .house-icon's width.
+
+    Border radius should be set to 1/6 of .house-icon's width.
+
+    Borders meet at a diagonal, so the transparent left & right 
+    borders help shape the bottom one into a roof shape
+    */
+    border-left: 2.5em solid transparent;
+    border-right: 2.5em solid transparent;
+    border-bottom: 1.9em solid #E09664;
+    border-radius: 2em;
+}
+
+.house-icon-walls {
+    width: 50%;
+    flex: 1 1 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E09664;
+    display: grid;
+    border-top: rgb(1, 1, 55) 3px solid;
+
+    /* space, window, space, door, space, window, space*/
+    grid-template-columns: repeat(7, 1fr);
+
+    /*space, window + upperDoor, lowerDoor*/
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.house-icon-walls div {
+    background-color: whitesmoke;
+}
+
+#home-button-icon-left-window {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#home-button-icon-right-window {
+    grid-column: 6;
+    grid-row: 2;
+}
+
+.house-icon-door {
+    grid-column: 4;
+    grid-row: 2 / 3;
+}
+/* END HEADER STYLING*/
+
+
+#everything-below-header {
+    padding-top: 5em;
+    height: 100%;
+}
+
+
+/* BEGIN LEFT SIDEBAR STYLING*/
+#left-sidebar-external-trim {
+    background-color: #eac05f;
+    min-height: fit-content;
     width: 180px;
     padding: 5px;
+    z-index: 1;
     position: fixed;
 }
 
-nav.vertical-navbar {
+#left-sidebar {
     height: 100%;
     width: 100%;
     padding: 10px;
-    background-color: rgb(1, 1, 55);
+    background-color: #364968;
     color: whitesmoke;
     font-weight: bold;
     text-align: center;
 }
 
-hr.sidebar-line {
+.sidebar-content-separator {
     margin: 10px;
     border: whitesmoke 1px groove;
 }
 
 ul.vertical-navbar-list {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     list-style-type: none;
     height: fit-content;
 }
 
+li.vertical-navbar-list-element {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
 li.vertical-navbar-list-element:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.internal-nav-link {
+a.sidebar-internal-nav-link {
     padding-top: 5px;
     padding-right: 7px;
     padding-bottom: 5px;
     padding-left: 7px;
     background-color: #4fa4ea;
-    border: solid black 1px;
+    border: solid black 2px;
     border-radius: 20px;
 }
 
+a.sidebar-internal-nav-link:link {
+    text-decoration: none;
+}
+
+a.sidebar-internal-nav-link:visited {
+    text-decoration: none;
+}
+
+a.sidebar-internal-nav-link:hover{
+    text-decoration: none;
+}
+
+a.sidebar-internal-nav-link:active {
+    text-decoration: none;
+}
+/* END LEFT SIDEBAR STYLING*/
+
+
 div.content {
-    height: 100%;
+    height: fit-content;
     min-width: 520px;
     width: auto;
     position: relative;
@@ -67,30 +208,27 @@ div.content {
     flex-direction: column;
 }
 
-/*
-footer {
-    bottom: 0;
-}
-
-header {
-    position: fixed;
-    top: 0;
-}
-*/
-header, footer {
-    color: white;
-    background-color: #1976D2;
-    height: 5em;
-    width: 100%;
-    z-index: 100;
-    padding: 10px;
-}
 
 main {
-    background-color: green;
-    height: 100%;
+    background-color: beige;
+    height: fit-content;
     width: 100%;
     top: 5em;
     bottom: 5em;
     padding: 10px;
+}
+
+#page-title {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+footer {
+    min-height: 100px;
+    background-color: rgb(28, 28, 73);
+    color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
 }
