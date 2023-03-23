@@ -1,90 +1,273 @@
-a {
-    color: white;
-}
-
-aside.left-sidebar {
-    /*flex-grow: 3;*/
-    height: 100%;
-    position: fixed;
-    float: left;
+*:not(hr) {
+    /*Universal CSS Reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px red dashed;*/
 }
 
 body {
-    background-color:rgba(182, 98, 67, 0.437);
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    /*
-    display: flex;
-    flex-direction: row;
-    */
-}
-
-div.content {
-    height: 100%;
-    position: fixed;
-    float: right;
-}
-/*
-div.flex-row {
-    flex-grow: 8;
-    height: 80%;
-}
-*/
-
-figcaption {
-    font-weight: bold;
-    text-align: center;
-}
-
-header, footer {
-    color: white;
-    background-color:  #1976D2;
-    margin: 0%;
-    padding: 1em;
-    /*flex-grow: 1;*/
-    position: fixed;
-    height: 5%;
-}
-
-header {
-    top: 0;
-}
-
-footer {
-    bottom: 0;
-}
-
-li {
-    list-style: none;
-}
-
-main {
-    margin: 0%;
-    padding: 0%;
-    height: 90%;
-    flex-grow: 7;
-}
-
-nav.vertical-nav {
-    margin: 0%;
-    height: 100%;
-    background-color: rgb(9, 9, 105);
-    color: whitesmoke;
-    font-weight: bold;
-    text-align: center;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    background-color: black;
     display: flex;
     flex-direction: column;
 }
 
-h1, h2, h3, label, #flag_container {
-    margin: 20px;
+
+/* BEGIN HEADER STYLING*/
+header {
+    height: 5em;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    background-color: rgb(1, 1, 55);
+    color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
 }
 
-ul {
-    padding: 0%;
+header a.home-button:link {
+    text-decoration: none;
+}
+
+header a.home-button:visited {
+    text-decoration: none;
+}
+
+header a.home-button:hover{
+    text-decoration: none;
+}
+
+header a.home-button:active {
+    text-decoration: none;
+}
+
+header a.home-button {
+    height: 100%;
+    width: 3em;
+    display: flex;
+    flex-direction: row;
+}
+
+div.home-button-house-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+div.house-icon-roof {
+    width: 100%;
+    /*
+    Set left and right border width to half of .house-icon's width,
+    and bottom border width to 2/3 of .house-icon's width.
+
+    Border radius should be set to 1/6 of .house-icon's width.
+
+    Borders meet at a diagonal, so the transparent left & right 
+    borders help shape the bottom one into a roof shape
+    */
+    border-left: 2.5em solid transparent;
+    border-right: 2.5em solid transparent;
+    border-bottom: 1.9em solid #E09664;
+    border-radius: 2em;
+}
+
+div.house-icon-walls {
+    width: 50%;
+    flex: 1 1 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E09664;
+    border-top: rgb(1, 1, 55) 3px solid;
+    display: grid;
+
+    /* space, window, space, door, space, window, space*/
+    grid-template-columns: repeat(7, 1fr);
+
+    /*space, window + upperDoor, lowerDoor*/
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#home-button-icon-left-window {
+    background-color: whitesmoke;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#home-button-icon-right-window {
+    background-color: whitesmoke;
+    grid-column: 6;
+    grid-row: 2;
+}
+
+#house-icon-door {
+    background-color: whitesmoke;
+    grid-column: 4;
+    grid-row: 2 / 3;
+}
+
+header h2 {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
+}
+/* END HEADER STYLING*/
+
+
+#everything-below-header {
+    margin-top: 5em;
+    height: calc(100% - 5em);
+}
+
+
+/* BEGIN LEFT SIDEBAR STYLING*/
+#left-sidebar-external-trim {
+    background-color: #eac05f;
+    height: calc(100vh - 5em);
+    width: 180px;
+    padding: 5px;
+    position: fixed;
+}
+
+#left-sidebar {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: #364968;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr.sidebar-content-separator {
+    margin: 10px;
+    border: whitesmoke 1px groove;
+}
+
+div.back-to-top-button-arrow-icon{
+    height: 3em;
+    width: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    border: whitesmoke solid 2px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.arrow-icon-head {
+    height: 30%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid whitesmoke;
+}
+
+div.arrow-icon-tail {
+    height: 30%;
+    width: 30%;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+ul.vertical-navbar-list {
+    /*
+    Height = Full height of sidebar - heights of back to top button and sidebar header
+                - margins of both line separators - paddign from sidebar
+    */
+    height: calc(100% - 6em - 55px);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    overflow-y: scroll;
+}
+
+li.vertical-navbar-list-element {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+li.vertical-navbar-list-element:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+a.sidebar-internal-nav-link {
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    background-color: #4fa4ea;
+    border: solid black 2px;
+    border-radius: 20px;
+}
+
+a.sidebar-internal-nav-link:link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a.sidebar-internal-nav-link:visited {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a.sidebar-internal-nav-link:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a.sidebar-internal-nav-link:active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+/* END LEFT SIDEBAR STYLING*/
+
+
+div.content {
+    height: fit-content;
+    min-width: 520px;
+    width: auto;
+    position: relative;
+    margin-left: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    background-color: beige;
+    height: fit-content;
+    width: 100%;
+    top: 5em;
+    bottom: 5em;
+    padding: 10px;
+}
+
+#page-title {
+    text-decoration: underline #960000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #960000;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -5rem;
+    visibility: hidden;
 }
 
 .flag_container {
@@ -92,53 +275,49 @@ ul {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    padding: 10px;
+    width: 80%;
     height: auto;
-    border: black solid 2px;
+    background-color: #6C4343;
     border-radius: 20px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: center;
 }
 
 .flag_figure {
+    margin-left: auto;
+    margin-right: auto;
     margin: 1%;
     padding: 2%;
     height: auto;
-    width: 5%;
+    max-width: 20%;
     background-color: gray;
+
+    border: 0.5em solid #eac05f;
+    border-radius: 10%;
+    outline-offset: -1em;
+
+    text-align: center;
+    border-radius: 15px 50px;
 }
 
 .flag_img {
-    width: 50%;
-    border: 10px solid rgb(0, 0, 0);
+    width: 75%;
+    border: 1em solid rgb(0, 0, 0);
     border-radius: 10%;
-    outline: 5px solid rgb(255, 255, 255);
-    outline-offset: -10px;
+    outline: 0.5em solid lightblue;
+    outline-offset: -1em;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.internal-nav-link {
-    padding: 3px;
-    background-color: #BBDEFB;
-    border: solid black 1px;
-    border-radius: 20px;
-}
-
-#content {
-    position: fixed;
-    flex-grow: 7;
-    height: 80%;
+footer {
+    min-height: 100px;
+    background-color: rgb(28, 28, 73);
+    color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    position: relative;
 }
