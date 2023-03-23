@@ -11,6 +11,8 @@ body {
     height: fit-content;
     width: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -90,14 +92,14 @@ header h2 {
     margin-left: auto;
     margin-right: auto;
     background-color: #E09664;
-    display: grid;
     border-top: rgb(1, 1, 55) 3px solid;
+    display: grid;
 
     /* space, window, space, door, space, window, space*/
     grid-template-columns: repeat(7, 1fr);
 
     /*space, window + upperDoor, lowerDoor*/
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .house-icon-walls div {
@@ -114,7 +116,7 @@ header h2 {
     grid-row: 2;
 }
 
-.house-icon-door {
+#house-icon-door {
     grid-column: 4;
     grid-row: 2 / 3;
 }
@@ -122,15 +124,15 @@ header h2 {
 
 
 #everything-below-header {
-    padding-top: 5em;
-    height: 100%;
+    margin-top: 5em;
+    height: calc(100% - 5em);
 }
 
 
 /* BEGIN LEFT SIDEBAR STYLING*/
 #left-sidebar-external-trim {
     background-color: #eac05f;
-    min-height: fit-content;
+    height: calc(100vh - 5em);
     width: 180px;
     padding: 5px;
     z-index: 1;
@@ -153,12 +155,13 @@ header h2 {
 }
 
 ul.vertical-navbar-list {
+    height:calc(100% - 4em);
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    height: fit-content;
+    overflow-y: scroll;
 }
 
 li.vertical-navbar-list-element {
