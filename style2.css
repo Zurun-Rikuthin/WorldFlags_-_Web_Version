@@ -50,26 +50,16 @@ header a.home-button:active {
 header a.home-button {
     height: 100%;
     width: 3em;
-    z-index: 1;
     display: flex;
     flex-direction: row;
 }
 
-header h2 {
-    margin-left: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-.home-button-house-icon {
+div.home-button-house-icon {
     display: flex;
     flex-direction: column;
 }
 
-.house-icon-roof {
+div.house-icon-roof {
     width: 100%;
     /*
     Set left and right border width to half of .house-icon's width,
@@ -86,7 +76,7 @@ header h2 {
     border-radius: 2em;
 }
 
-.house-icon-walls {
+div.house-icon-walls {
     width: 50%;
     flex: 1 1 auto;
     margin-left: auto;
@@ -102,23 +92,31 @@ header h2 {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.house-icon-walls div {
-    background-color: whitesmoke;
-}
-
 #home-button-icon-left-window {
+    background-color: whitesmoke;
     grid-column: 2;
     grid-row: 2;
 }
 
 #home-button-icon-right-window {
+    background-color: whitesmoke;
     grid-column: 6;
     grid-row: 2;
 }
 
 #house-icon-door {
+    background-color: whitesmoke;
     grid-column: 4;
     grid-row: 2 / 3;
+}
+
+header h2 {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
 }
 /* END HEADER STYLING*/
 
@@ -135,7 +133,6 @@ header h2 {
     height: calc(100vh - 5em);
     width: 180px;
     padding: 5px;
-    z-index: 1;
     position: fixed;
 }
 
@@ -149,15 +146,49 @@ header h2 {
     text-align: center;
 }
 
-.sidebar-content-separator {
+hr.sidebar-content-separator {
     margin: 10px;
     border: whitesmoke 1px groove;
 }
 
+div.back-to-top-button-arrow-icon{
+    height: 3em;
+    width: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    border: whitesmoke solid 2px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.arrow-icon-head {
+    height: 30%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid whitesmoke;
+}
+
+div.arrow-icon-tail {
+    height: 30%;
+    width: 30%;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
 ul.vertical-navbar-list {
-    height:calc(100% - 4em);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*
+    Height = Full height of sidebar - heights of back to top button and sidebar header
+                - margins of both line separators - paddign from sidebar
+    */
+    height: calc(100% - 6em - 55px);
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -185,18 +216,22 @@ a.sidebar-internal-nav-link {
 
 a.sidebar-internal-nav-link:link {
     text-decoration: none;
+    color: whitesmoke;
 }
 
 a.sidebar-internal-nav-link:visited {
     text-decoration: none;
+    color: whitesmoke;
 }
 
 a.sidebar-internal-nav-link:hover{
     text-decoration: none;
+    color: whitesmoke;
 }
 
 a.sidebar-internal-nav-link:active {
     text-decoration: none;
+    color: whitesmoke;
 }
 /* END LEFT SIDEBAR STYLING*/
 
@@ -222,8 +257,60 @@ main {
 }
 
 #page-title {
-    text-decoration: underline;
+    text-decoration: underline #960000;
     margin-top: 10px;
+    margin-bottom: 10px;
+    color: #960000;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -5rem;
+    visibility: hidden;
+}
+
+.flag_container {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    background-color: #6C4343;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.flag_figure {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1%;
+    padding: 2%;
+    height: auto;
+    max-width: 20%;
+    background-color: gray;
+
+    border: 0.5em solid #eac05f;
+    border-radius: 10%;
+    outline-offset: -1em;
+
+    text-align: center;
+    border-radius: 15px 50px;
+}
+
+.flag_img {
+    width: 75%;
+    border: 1em solid rgb(0, 0, 0);
+    border-radius: 10%;
+    outline: 0.5em solid lightblue;
+    outline-offset: -1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -232,6 +319,5 @@ footer {
     color: whitesmoke;
     width: 100%;
     padding: 10px;
-    z-index: 1;
     position: relative;
 }
